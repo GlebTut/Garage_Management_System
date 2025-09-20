@@ -1,0 +1,224 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    /* height: 100%; */
+    background-color:var(--third_color);
+}
+:root{
+    --container_padding:10px;
+
+    --borderradius:10px;
+    --first_color: #dee33e;
+    --second_color:#9fa324;
+    --third_color:#e9e7e7;
+    --fourth_color:#000000;
+    --font_sub_color:#515153;
+    --fourth_color: #f5f5f5;
+    --buttonPadding:10px;
+    --border-radius:10px ;
+}
+/* <!-- main container with display grip to handle the layout of page --> */
+.main_container{
+display: grid;
+grid-template-columns: 270px auto;
+grid-template-rows: auto auto 1fr;
+grid-template-areas: 
+"sidebar header"
+"sidebar dashboard"
+"sidebar dashboard"
+"sidebar dashboard"
+"footer footer";
+/* height: 1000; */
+
+/* background-color: var(--first_color); */
+}
+
+
+.admin_dashboard_main{
+    grid-area: dashboard;
+    border: 2px solid red;
+    
+}
+.dashboard_header{
+    grid-area: header;
+    padding: 10px 0;
+    gap: 20px;
+    text-align: center;
+    background-color: var(--third_color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--fourth_color);
+}
+
+
+.center_header input[type=search]{
+    border: 2px solid rgba(0, 0, 0, 0.088);
+    border-radius: 10px;
+    background-image: url("/Assets/images/search_icon.png");
+    background-color: var(--fourth_color);
+    background-size: 20px; 
+    background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+input::placeholder{
+    padding: 5px;
+    
+}
+.right_header{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.right_header .admin_img{
+    width: 40px;
+    border-radius: 60%;
+    border: 1px solid black;
+    padding: 2px;
+    
+}
+/* dashboard section */
+.dashboard_content_Section,.delete_supplier_main_conatainer{
+    padding: 20px;
+}
+.top_dashboard{
+    display: grid;
+grid-template-columns: repeat(3, 350px);
+grid-template-areas: 
+"graph1 graph2 graph3";
+    column-gap: 10px;
+  justify-content: space-between;
+    padding: 0 0 10px 0;
+    border: 2px solid red;
+    /* width: 400px; */
+}
+.income__container_title{
+    width: 100%;
+    text-align: center;
+    padding: var(--container_padding);
+}
+.graph_container{
+    background-color: var(--fourth_color);
+    /* padding: 10px; */
+    
+border-radius: 10px;
+}
+.gc1{
+grid-area: graph1;
+}
+.gc2{
+    grid-area: graph2;
+}
+.gc3{
+    grid-area: graph3;
+}
+.gc1,.gc2,.gc3{
+    border: 2px solid red;
+}
+.income_status{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    color:var(--font_sub_color)
+}
+p span{
+    color: var(--second_color);
+}
+/* recent booking table
+delete supplier page */
+.recent_booking_section_container,.suppliers_list_section_container{
+    background-color: var(--fourth_color);
+    padding: 0 var(--buttonPadding);
+    border: 2px solid red;
+border-radius: 10px;
+/* yaha se krn aai agee */
+}
+.booking_table_container,.supplier_table_conatainer{
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 460px;
+    background-color: var(--fourth_color);
+    overflow: scroll;
+    /* Hide scrollbar */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    }
+    
+    /* Hide scrollbar for Chrome, Safari, and Opera */
+    .main_form_container::-webkit-scrollbar {
+    display: none;
+    }
+    
+.heading,.heading_container_supplier_list{
+    color: var(--font_sub_color);
+    padding: 20px 0;
+}
+.table{
+    width: 100%;
+    /* overflow:auto; */
+    border-collapse: collapse;
+    position: sticky;
+}
+th, td {
+    padding: 10px;
+}
+
+.table-column{
+    border:2px solid black;
+    /* position: static; */
+}
+td{
+      border-bottom:2px solid rgba(0, 0, 0, 0.064);
+    text-align: center;
+  }
+  .dashboard_recent_booking_container,.supplier_list_container{
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+  }
+
+
+/* Delete supplier page >supplier drop down */
+.delete_supplierheader ul{
+    display: flex;
+}
+
+
+#dynamicDisplayForms{
+    width: 100%;
+    height: 1080px;
+    border: 2px solid rebeccapurple;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+     overflow: auto; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* footer */
+  .footer{
+    grid-area: footer;
+    border: 2px solid black;
+    padding: 20px;
+    background-color: #9fa324;
+    grid-column: 1/3;
+  }

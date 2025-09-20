@@ -1,0 +1,90 @@
+*{
+    padding:  0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --container_padding:10px;
+    
+    --borderradius:10px;
+    --first_color: #86A789;
+    --second_color:#B2C8BA;
+    --third_color:#D2E3C8;
+    --fourth_color:#EBF3E8;
+}
+body{
+    background-color: var(--first_color);
+    position: relative;
+    z-index: 1;
+    
+}
+body::after{
+    content: "";
+position: absolute;
+/* background: url(/Assets/images/login_page_background.jpg); */
+z-index: -1;
+top: 0;
+left: 0;
+top: 0;
+bottom: 0;
+width: 100%;
+height: auto;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+opacity: 0.7;
+
+}
+.login_page_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.logo_name_Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border:var(--borderradius);
+    padding: var(--container_padding);
+    color: var(--fourth_color);
+}
+.logo{
+    width: 100px;
+    height: auto;
+}
+
+/* login form container */
+.login_form_contanier{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--fourth_color);
+    width: 500px;
+    text-align: center;
+    padding: var(--container_padding) 0;
+    border-radius: var(--borderradius);
+color: var(--first_color);
+
+}
+input[type=email],input[type=password]{
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 18rem;
+}
+/* button  */
+.login_button{
+    width: 15rem;
+    padding: 10px;
+    background-color: var(--first_color);
+    color: var(--fourth_color);
+    border: none;
+    border-radius: var(--borderradius);
+}
+
